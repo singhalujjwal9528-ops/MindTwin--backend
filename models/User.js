@@ -7,7 +7,8 @@ const userSchema = new mongoose.Schema(
     email: String,
     password: String,
     age: Number,
-    gender: String
+    gender: String,
+    targetSleep: { type: Number, default: 8.0 }
 },
 {
     collection: "users"

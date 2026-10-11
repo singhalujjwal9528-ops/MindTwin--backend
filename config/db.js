@@ -1,3 +1,7 @@
+const dns = require('dns');
+// Ensure reliable SRV lookup on Windows routers
+dns.setServers(['8.8.8.8', '1.1.1.1']);
+
 
 const mongoose = require("mongoose");
 

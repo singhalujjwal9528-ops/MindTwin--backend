@@ -3,9 +3,11 @@ const router = express.Router();
 
 const {
     getUserMood,
-    addMood
+    addMood,
+    getMoodForecast
 } = require("../controllers/moodController");
 
+router.get("/forecast/:userId", getMoodForecast);
 router.get("/:userId", getUserMood);
 router.post("/", addMood);
 
